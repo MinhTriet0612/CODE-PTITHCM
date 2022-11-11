@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	long  k; cin>>k;
+	long  p=k;
+	long  z=k;
+	int dem=0;
+	while (k>0)
+	{
+		k/=10;
+		dem++; //tim duoc so co bao nhieu chu so 
+	}
+	while (p>=10)
+	{
+		p/=10;//tim so dau tien
+	}
+	for (int i=1;i<dem;i++)
+	{
+		p*=10;
+	}
+	z=z-p;
+
+	int check=0;
+	for ( int i=2; i<=sqrt(z);i++)
+	{
+		if (z%i==0)
+		{
+			check++;
+		}
+	}
+	if (check ==0 ||z==2)
+	{
+		cout<<"True";
+	}
+	else
+	{
+		cout<<"False";
+	}
+	
+	
+	
+}
