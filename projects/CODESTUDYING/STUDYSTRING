@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+// stringstream
+	string s= "NGUYEN MINH               TRIET";
+	stringstream ss(s);
+	string temp;
+	while(ss>>temp)
+		cout<<temp<<" ";
+// to_string
+	int a=10000;
+	string b=to_string(a);
+	cout<<b;
+// substr
+	string c="abcdef";
+	string d=c.substr(2,1);
+	cout<<d;
+}
