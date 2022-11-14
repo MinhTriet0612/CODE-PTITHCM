@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+using namespace std; 
+void printPrimes(int lower, int upper)
+{  int i;
+    
+    int a[100000];
+
+    for (int i=lower; i<=upper; i++)
+    {   
+        int check=0;
+        for (int j=2; j<=sqrt(i);j++)
+        {
+            if (i%j==0)
+            {
+                check++;
+            }
+        }
+    
+        if (check == 0)
+        {
+            a[i]=i;
+        }
+        else
+        {
+            a[i]=0;
+        }
+    }
+
+
+    for (int i=lower; i<=upper; i++)
+    {
+        if(a[i]!=0 && a[i]!=1)
+        {
+            cout<<a[i]<<" ";
+        }
+    }
+}
+int main()
+{
+    int lower,upper;
+    cin>>lower;
+    cin>>upper;
+    printPrimes(lower,upper);
+    return 0;
+}
