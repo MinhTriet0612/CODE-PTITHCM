@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    pair<int,int> v=make_pair(100,200);
+    cout<<v.first<<endl;
+    cout<<v.second<<endl;
+    // tuple
+    tuple<string, int, string> t=make_tuple("java",100,"python");
+    cout<<get<0>(t)<<" "; 
+    cout<<get<1>(t)<<" ";
+}
