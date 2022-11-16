@@ -1,0 +1,66 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//khai bao vecto: vecto<data-type>ten_vector
+int main()
+{
+    // khai bao
+    vector<int> v;
+    // vector<int> v
+    // vector<int> v(n)
+    // vector<int> v(n,value)
+    //push_back
+    v.push_back(10);
+    v.push_back(20);
+    // size:kich thuoc vector
+    
+    v.push_back(30);
+   cout<<v.size()<<endl; 
+   // cout<<v.size()<<endl;
+    //  phan tu dau tien cua vector la V[0]
+    // cout<<v[0];
+    // phan tu cuoi cung cua vector la
+    // cout<<v[v.size()-1];
+    //  hoac
+    // cout<<v.back(); 
+    //duyet phan tu cua vector 
+    // for (int i=0;i<v.size();i++)
+    // {
+    //     cout<<v[0];
+    // }
+    // duyet thogn qua index
+    // for (int x:v)
+    // {
+    //     cout<<x<<endl;
+    // }
+    // duyet thong qua iterator
+    for(vector<int>::iterator it =v.begin();it!=v.end();it++)
+    {
+        // it(ten cua iterator vua duoc khai bao vector) la mot con tro 
+        cout<<*it<<endl;
+    }
+} 
+
+
+
+
+
+
+//xu ly xau bang stringstream
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<string>v;
+    string s="Triet         dep trai";
+    stringstream ss(s);
+    string temp;
+    while (ss>>temp) // 0 1 2 3 4 5
+    {
+        v.push_back(temp);
+    }
+    for (string x:v)
+    {
+        cout<<x<<" ";
+    }
+}
